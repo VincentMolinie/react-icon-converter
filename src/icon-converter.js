@@ -19,26 +19,47 @@ export default class IconConverter extends React.Component {
       flexDirection: 'row',
       width: '100%',
     };
-    const itemStyle = { color: 'black', height: '40px', width: '40px' };
-    const pickerStyle = { position: 'absolute', top: 0, right: '50px' };
+    const itemStyle = { color: 'black', height: '41px', width: '40px' };
+    const pickerStyle = {
+      position: 'absolute',
+      top: 0,
+      left: '80px',
+      zIndex: 10,
+    };
     const className = `fa fa-2x fa-${this.state.icon.icon}`;
-    const picker = this.state.shouldDisplayPicker ? (
-      <Picker
-        onSelect={(value) => {
-          this.state.icon.emoji = value;
-        }}
-        style={pickerStyle}
-      />
-    ) : null;
+    let picker = null;
+    if (this.state.shouldDisplayPicker) {
+      picker = (
+        <Picker
+          onSelect={(value) => {
+            this.state.icon.emoji = value.native;
+            this.setState({
+              shouldDisplayPicker: !this.state.shouldDisplayPicker,
+            });
+          }}
+          style={pickerStyle}
+        />
+      );
+    }
 
+    const emojiStyle = {
+      width: '40px',
+      height: '40px',
+      fontSize: '40px',
+      lineHeight: '40px',
+    };
+    if (!this.state.icon.emoji) {
+      emojiStyle.backgroundColor = 'grey';
+    }
+    const onClick = () => {
+      this.setState({
+        shouldDisplayPicker: !this.state.shouldDisplayPicker,
+      });
+    };
     return (
       <div style={containerStyle}>
         <i className={className} style={itemStyle} />
-        <span
-          onClick={this.setState({
-            shouldDisplayPicker: !this.state.shouldDisplayPicker,
-          })}
-        >
+        <span onClick={onClick} style={emojiStyle}>
           {this.state.icon.emoji}
         </span>
         {picker}

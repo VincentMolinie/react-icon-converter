@@ -2,10 +2,10 @@ import React from 'react';
 import './style.css';
 import icons from './icons';
 import IconConverter from './icon-converter';
+import DisplayMapping from './display-mapping';
 
 export default function App() {
   const iconsMapping = icons.map((icon) => ({ icon }));
-  console.log(iconsMapping);
   const containerSttyle = {
     position: 'relative',
     display: 'flex',
@@ -18,5 +18,10 @@ export default function App() {
     const className = `fa fa-2x fa-${iconMapping.icon}`;
     return <IconConverter icon={iconMapping} />;
   });
-  return <div>{iconsDom}</div>;
+  return (
+    <div>
+      {iconsDom}
+      <DisplayMapping iconsMapping={iconsMapping} />
+    </div>
+  );
 }
