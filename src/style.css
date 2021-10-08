@@ -4,7 +4,7 @@ p {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url(./icomoon.svg?uvhmt3#icomoon) format('svg');
+  src: url(./icomoon.ttf?uvhmt3) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
