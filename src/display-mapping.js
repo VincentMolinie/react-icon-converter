@@ -36,7 +36,7 @@ export default class DisplayMapping extends React.Component {
         <span style={{ fontSize: '40px', color: 'black' }}>NOT COMPLETE</span>
       );
     const textComponent =
-      this.state.version === 0 || isNotComplete ? null : (
+      this.state.version === 0 ? null : (
         <textarea
           value={JSON.stringify(this.hashMapping)}
           style={textareaStyle}
