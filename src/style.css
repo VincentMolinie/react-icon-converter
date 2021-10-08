@@ -1,3 +1,55 @@
-h1, p {
+h1,
+p {
   font-family: Lato;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url(./icomoon.svg?uvhmt3#icomoon) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa-layer,
+.fa-close\.io,
+.fa-intercom,
+.fa-mixpanel,
+.fa-sitemap,
+.fa-stripe,
+.fa-closeio {
+  font-family: 'icomoon' !important;
+}
+
+.fa-layer:before {
+  font-family: 'icomoon' !important;
+  content: '\e900';
+}
+
+.fa-intercom:before {
+  font-family: 'icomoon' !important;
+  content: '\e902';
+}
+
+.fa-watch:before {
+  font-family: 'icomoon' !important;
+  content: '\e903';
+}
+
+.fa-closeio:before,
+.fa-close\.io:before {
+  font-family: 'icomoon' !important;
+  content: '\e904';
+}
+
+.fa-mixpanel:before {
+  font-family: 'icomoon' !important;
+  content: '\e905';
+}
+
+.fa-sitemap:before {
+  font-family: 'icomoon' !important;
+  content: '\f0e8';
+}
+.fa-stripe:before {
+  font-family: 'icomoon' !important;
+  content: '\e901';
 }

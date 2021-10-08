@@ -231,7 +231,6 @@ export default [
   'bed',
   'google-wallet',
   'th',
-  'closeio',
   'file-movie-o',
   'circle-o-notch',
   'snapchat-ghost',
