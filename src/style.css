@@ -4,7 +4,10 @@ p {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url(./icomoon.ttf?uvhmt3) format('truetype');
+  src: url(./icomoon.eot);
+  src: url(./icomoon.eot) format('embedded-opentype'),
+    url(./icomoon.ttf) format('truetype'), url(./icomoon.woff) format('woff'),
+    url(./icomoon.svg?uvhmt3#icomoon) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,40 +19,40 @@ p {
 .fa-sitemap,
 .fa-stripe,
 .fa-closeio {
-  font-family: 'icomoon' !important;
+  /* font-family: 'icomoon' !important; */
 }
 
 .fa-layer:before {
-  font-family: 'icomoon' !important;
+  /* font-family: 'icomoon' !important; */
   content: '\e900';
 }
 
 .fa-intercom:before {
-  font-family: 'icomoon' !important;
+  /* font-family: 'icomoon' !important; */
   content: '\e902';
 }
 
 .fa-watch:before {
-  font-family: 'icomoon' !important;
+  /* font-family: 'icomoon' !important; */
   content: '\e903';
 }
 
 .fa-closeio:before,
 .fa-close\.io:before {
-  font-family: 'icomoon' !important;
+  /* font-family: 'icomoon' !important; */
   content: '\e904';
 }
 
 .fa-mixpanel:before {
-  font-family: 'icomoon' !important;
+  /* font-family: 'icomoon' !important; */
   content: '\e905';
 }
 
 .fa-sitemap:before {
-  font-family: 'icomoon' !important;
+  /* font-family: 'icomoon' !important; */
   content: '\f0e8';
 }
 .fa-stripe:before {
-  font-family: 'icomoon' !important;
-  content: '\e901';
+  /* font-family: 'icomoon' !important; */
+  content: '\f1f5';
 }
