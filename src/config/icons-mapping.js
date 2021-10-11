@@ -13,6 +13,7 @@ export default {
   'calendar-o': '📆',
   ticket: '🎟️',
   bank: '🏛️',
+  'file-text-o': '📄',
   building: '🏢',
   dollar: '💲',
   users: '👥',
