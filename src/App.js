@@ -1,27 +1,23 @@
 import React from 'react';
 import './style.css';
-import icons from './icons';
+import icons from './config/icons';
 import IconConverter from './icon-converter';
 import DisplayMapping from './display-mapping';
+import iconsMapping from './config/icons-mapping';
 
 export default function App() {
-  const iconsMapping = icons.map((icon) => ({ icon }));
-  const containerSttyle = {
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-  };
-  const itemSttyle = { color: 'black', height: '40px', width: '40px' };
+  const iconsMappingAsList = icons.map((icon) => ({
+    icon,
+    emoji: iconsMapping[icon],
+  }));
 
-  const iconsDom = iconsMapping.map((iconMapping) => {
-    const className = `fa fa-2x fa-${iconMapping.icon}`;
+  const iconsDom = iconsMappingAsList.map((iconMapping) => {
     return <IconConverter icon={iconMapping} />;
   });
   return (
     <div>
       {iconsDom}
-      <DisplayMapping iconsMapping={iconsMapping} />
+      <DisplayMapping iconsMapping={iconsMappingAsList} />
     </div>
   );
 }
