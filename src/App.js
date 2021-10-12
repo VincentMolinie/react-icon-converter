@@ -6,16 +6,16 @@ import DisplayMapping from './display-mapping';
 import iconsMapping from './config/icons-mapping';
 
 export default function App() {
-  const iconsMappingAsList = icons
-    .filter((icon) => !iconsMapping[icon])
-    .map((icon) => ({
-      icon,
-      emoji: iconsMapping[icon],
-    }));
+  const iconsMappingAsList = icons.map((icon) => ({
+    icon,
+    emoji: iconsMapping[icon],
+  }));
 
-  const iconsDom = iconsMappingAsList.map((iconMapping) => {
-    return <IconConverter icon={iconMapping} />;
-  });
+  const iconsDom = iconsMappingAsList
+    .filter((icon) => !iconsMapping[icon.icon])
+    .map((iconMapping) => {
+      return <IconConverter icon={iconMapping} />;
+    });
   return (
     <div>
       {iconsDom}
