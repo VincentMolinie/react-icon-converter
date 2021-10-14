@@ -252,7 +252,7 @@ export default {
   bomb: '💣',
   'paper-plane-o': '✉️',
   'star-half-full': '⭐',
-  'external-link': '🔼',
+  'external-link': '🔗',
   'toggle-on': '☑️',
   cloud: '☁️',
   'th-large': '🌍',
